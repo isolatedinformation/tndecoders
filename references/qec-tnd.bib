@@ -1,3 +1,37 @@
+@ARTICLE{Smith2022-gt,
+  title         = "A local pre-decoder to reduce the bandwidth and latency of
+                   quantum error correction",
+  author        = "Smith, Samuel C and Brown, Benjamin J and Bartlett, Stephen
+                   D",
+  abstract      = "A fault-tolerant quantum computer will be supported by a
+                   classical decoding system interfacing with quantum hardware
+                   to perform quantum error correction. It is important that
+                   the decoder can keep pace with the quantum clock speed,
+                   within the limitations on communication that are imposed by
+                   the physical architecture. To this end we propose a local
+                   `pre-decoder', which makes greedy corrections to reduce the
+                   amount of syndrome data sent to a standard matching decoder.
+                   We study these classical overheads for the surface code
+                   under a phenomenological phase-flip noise model with
+                   imperfect measurements. We find substantial improvements in
+                   the runtime of the global decoder and the communication
+                   bandwidth by using the pre-decoder. For instance, to achieve
+                   a logical failure probability of $f = 10^\{-15\}$ using
+                   qubits with physical error rate $p = 10^\{-3\}$ and a
+                   distance $d=22$ code, we find that the bandwidth cost is
+                   reduced by a factor of $1000$, and the time taken by a
+                   matching decoder is sped up by a factor of $200$. To achieve
+                   this target failure probability, the pre-decoding approach
+                   requires a $50\%$ increase in the qubit count compared with
+                   the optimal decoder.",
+  month         =  aug,
+  year          =  2022,
+  keywords      = "QEC;master-thesis;qec-tnd",
+  archivePrefix = "arXiv",
+  primaryClass  = "quant-ph",
+  eprint        = "2208.04660"
+}
+
 @ARTICLE{Chubb2021-se,
   title         = "General tensor network decoding of {2D} Pauli codes",
   author        = "Chubb, Christopher T",
@@ -301,6 +335,101 @@
   keywords = "master-thesis;qec-tnd"
 }
 
+@ARTICLE{Acharya2022-ev,
+  title         = "Suppressing quantum errors by scaling a surface code logical
+                   qubit",
+  author        = "Acharya, Rajeev and Aleiner, Igor and Allen, Richard and
+                   Andersen, Trond I and Ansmann, Markus and Arute, Frank and
+                   Arya, Kunal and Asfaw, Abraham and Atalaya, Juan and
+                   Babbush, Ryan and Bacon, Dave and Bardin, Joseph C and
+                   Basso, Joao and Bengtsson, Andreas and Boixo, Sergio and
+                   Bortoli, Gina and Bourassa, Alexandre and Bovaird, Jenna and
+                   Brill, Leon and Broughton, Michael and Buckley, Bob B and
+                   Buell, David A and Burger, Tim and Burkett, Brian and
+                   Bushnell, Nicholas and Chen, Yu and Chen, Zijun and Chiaro,
+                   Ben and Cogan, Josh and Collins, Roberto and Conner, Paul
+                   and Courtney, William and Crook, Alexander L and Curtin, Ben
+                   and Debroy, Dripto M and Del Toro Barba, Alexander and
+                   Demura, Sean and Dunsworth, Andrew and Eppens, Daniel and
+                   Erickson, Catherine and Faoro, Lara and Farhi, Edward and
+                   Fatemi, Reza and Burgos, Leslie Flores and Forati, Ebrahim
+                   and Fowler, Austin G and Foxen, Brooks and Giang, William
+                   and Gidney, Craig and Gilboa, Dar and Giustina, Marissa and
+                   Dau, Alejandro Grajales and Gross, Jonathan A and Habegger,
+                   Steve and Hamilton, Michael C and Harrigan, Matthew P and
+                   Harrington, Sean D and Higgott, Oscar and Hilton, Jeremy and
+                   Hoffmann, Markus and Hong, Sabrina and Huang, Trent and
+                   Huff, Ashley and Huggins, William J and Ioffe, Lev B and
+                   Isakov, Sergei V and Iveland, Justin and Jeffrey, Evan and
+                   Jiang, Zhang and Jones, Cody and Juhas, Pavol and Kafri,
+                   Dvir and Kechedzhi, Kostyantyn and Kelly, Julian and
+                   Khattar, Tanuj and Khezri, Mostafa and Kieferov{\'a},
+                   M{\'a}ria and Kim, Seon and Kitaev, Alexei and Klimov, Paul
+                   V and Klots, Andrey R and Korotkov, Alexander N and
+                   Kostritsa, Fedor and Kreikebaum, John Mark and Landhuis,
+                   David and Laptev, Pavel and Lau, Kim-Ming and Laws, Lily and
+                   Lee, Joonho and Lee, Kenny and Lester, Brian J and Lill,
+                   Alexander and Liu, Wayne and Locharla, Aditya and Lucero,
+                   Erik and Malone, Fionn D and Marshall, Jeffrey and Martin,
+                   Orion and McClean, Jarrod R and Mccourt, Trevor and McEwen,
+                   Matt and Megrant, Anthony and Costa, Bernardo Meurer and Mi,
+                   Xiao and Miao, Kevin C and Mohseni, Masoud and Montazeri,
+                   Shirin and Morvan, Alexis and Mount, Emily and Mruczkiewicz,
+                   Wojciech and Naaman, Ofer and Neeley, Matthew and Neill,
+                   Charles and Nersisyan, Ani and Neven, Hartmut and Newman,
+                   Michael and Ng, Jiun How and Nguyen, Anthony and Nguyen,
+                   Murray and Niu, Murphy Yuezhen and O'Brien, Thomas E and
+                   Opremcak, Alex and Platt, John and Petukhov, Andre and
+                   Potter, Rebecca and Pryadko, Leonid P and Quintana, Chris
+                   and Roushan, Pedram and Rubin, Nicholas C and Saei, Negar
+                   and Sank, Daniel and Sankaragomathi, Kannan and Satzinger,
+                   Kevin J and Schurkus, Henry F and Schuster, Christopher and
+                   Shearn, Michael J and Shorter, Aaron and Shvarts, Vladimir
+                   and Skruzny, Jindra and Smelyanskiy, Vadim and Clarke Smith,
+                   W and Sterling, George and Strain, Doug and Szalay, Marco
+                   and Torres, Alfredo and Vidal, Guifre and Villalonga,
+                   Benjamin and Heidweiller, Catherine Vollgraff and White,
+                   Theodore and Xing, Cheng and Jamie Yao, Z and Yeh, Ping and
+                   Yoo, Juhwan and Young, Grayson and Zalcman, Adam and Zhang,
+                   Yaxing and Zhu, Ningfeng",
+  abstract      = "Practical quantum computing will require error rates that
+                   are well below what is achievable with physical qubits.
+                   Quantum error correction offers a path to
+                   algorithmically-relevant error rates by encoding logical
+                   qubits within many physical qubits, where increasing the
+                   number of physical qubits enhances protection against
+                   physical errors. However, introducing more qubits also
+                   increases the number of error sources, so the density of
+                   errors must be sufficiently low in order for logical
+                   performance to improve with increasing code size. Here, we
+                   report the measurement of logical qubit performance scaling
+                   across multiple code sizes, and demonstrate that our system
+                   of superconducting qubits has sufficient performance to
+                   overcome the additional errors from increasing qubit number.
+                   We find our distance-5 surface code logical qubit modestly
+                   outperforms an ensemble of distance-3 logical qubits on
+                   average, both in terms of logical error probability over 25
+                   cycles and logical error per cycle ($2.914\%\pm 0.016\%$
+                   compared to $3.028\%\pm 0.023\%$). To investigate damaging,
+                   low-probability error sources, we run a distance-25
+                   repetition code and observe a $1.7\times10^\{-6\}$ logical
+                   error per round floor set by a single high-energy event
+                   ($1.6\times10^\{-7\}$ when excluding this event). We are
+                   able to accurately model our experiment, and from this model
+                   we can extract error budgets that highlight the biggest
+                   challenges for future systems. These results mark the first
+                   experimental demonstration where quantum error correction
+                   begins to improve performance with increasing qubit number,
+                   illuminating the path to reaching the logical error rates
+                   required for computation.",
+  month         =  jul,
+  year          =  2022,
+  keywords      = "master-thesis;qec-tnd",
+  archivePrefix = "arXiv",
+  primaryClass  = "quant-ph",
+  eprint        = "2207.06431"
+}
+
 @ARTICLE{Fishman2020-aq,
   title         = "The {ITensor} Software Library for Tensor Network
                    Calculations",
@@ -342,4 +471,235 @@
   month     =  feb,
   year      =  2010,
   keywords  = "Tensor Networks;qec-tnd"
+}
+
+% The entry below contains non-ASCII chars that could not be converted
+% to a LaTeX equivalent.
+@ARTICLE{Kubica2018-ts,
+  title    = "{Three-Dimensional} Color Code Thresholds via
+              {Statistical-Mechanical} Mapping",
+  author   = "Kubica, Aleksander and Beverland, Michael E and Brand{\~a}o,
+              Fernando and Preskill, John and Svore, Krysta M",
+  abstract = "Three-dimensional (3D) color codes have advantages for
+              fault-tolerant quantum computing, such as protected quantum gates
+              with relatively low overhead and robustness against imperfect
+              measurement of error syndromes. Here we investigate the storage
+              threshold error rates for bit-flip and phase-flip noise in the 3D
+              color code (3DCC) on the body-centered cubic lattice, assuming
+              perfect syndrome measurements. In particular, by exploiting a
+              connection between error correction and statistical mechanics, we
+              estimate the threshold for 1D stringlike and 2D sheetlike logical
+              operators to be p\_\{3DCC\}^\{(1)\}≃1.9\% and
+              p\_\{3DCC\}^\{(2)\}≃27.6\%. We obtain these results by using
+              parallel tempering Monte Carlo simulations to study the
+              disorder-temperature phase diagrams of two new 3D
+              statistical-mechanical models: the four- and six-body random
+              coupling Ising models.",
+  journal  = "Phys. Rev. Lett.",
+  volume   =  120,
+  number   =  18,
+  pages    = "180501",
+  month    =  may,
+  year     =  2018,
+  keywords = "QEC;qec-tnd",
+  language = "en"
+}
+
+@ARTICLE{Wang_undated-nm,
+  title    = "{Confinement-Higgs} transition in a disordered gauge theory and
+              the accuracy threshold for quantum memoryq",
+  author   = "{Wang} and {Harrington} and {Preskill}",
+  journal  = "Ann. Phys.",
+  keywords = "QEC;qec-tnd"
+}
+
+@ARTICLE{Pryadko2019-bg,
+  title         = "On maximum-likelihood decoding with circuit-level errors",
+  author        = "Pryadko, Leonid P",
+  abstract      = "Error probability distribution associated with a given
+                   Clifford measurement circuit is described exactly in terms
+                   of the circuit error-equivalence group, or the circuit
+                   subsystem code previously introduced by Bacon, Flammia,
+                   Harrow, and Shi. This gives a prescription for
+                   maximum-likelihood decoding with a given measurement
+                   circuit. Marginal distributions for subsets of circuit
+                   errors are also analyzed; these generate a family of related
+                   asymmetric LDPC codes of varying degeneracy. More generally,
+                   such a family is associated with any quantum code.
+                   Implications for decoding highly-degenerate quantum codes
+                   are discussed.",
+  month         =  sep,
+  year          =  2019,
+  keywords      = "QEC;master-thesis;qec-tnd",
+  archivePrefix = "arXiv",
+  primaryClass  = "quant-ph",
+  eprint        = "1909.06732"
+}
+
+@ARTICLE{Brown2022-hg,
+  title         = "Conservation laws and quantum error correction: towards a
+                   generalised matching decoder",
+  author        = "Brown, Benjamin J",
+  abstract      = "A decoding algorithm is essential to any fault-tolerant
+                   quantum-computing architecture. In this perspective we
+                   explore decoding algorithms for the surface code; a
+                   prototypical quantum low-density parity-check code that
+                   underlies many of the leading efforts to demonstrate
+                   scalable quantum computing. Central to our discussion is the
+                   minimum-weight perfect-matching decoder. The decoder works
+                   by exploiting underlying structure that arises due to
+                   materialised symmetries among surface-code stabilizer
+                   elements. By concentrating on these symmetries, we begin to
+                   address the question of how a minimum-weight
+                   perfect-matching decoder might be generalised for other
+                   types of code. We approach this question first by
+                   investigating examples of matching decoders for other codes.
+                   These include decoding algorithms that have been specialised
+                   to correct for noise models that demonstrate a particular
+                   structure or bias with respect to certain types of code. In
+                   addition to this, we propose a systematic way of
+                   constructing a minimum-weight perfect-matching decoder for
+                   codes with certain characteristic properties. The properties
+                   we make use of are common among topological codes. We
+                   discuss the broader applicability of the proposal, and we
+                   suggest some questions we can address that may show us how
+                   to design a generalised matching decoder for arbitrary
+                   stabilizer codes.",
+  month         =  jul,
+  year          =  2022,
+  keywords      = "master-thesis;qec-tnd",
+  archivePrefix = "arXiv",
+  primaryClass  = "quant-ph",
+  eprint        = "2207.06428"
+}
+
+@ARTICLE{Wood2011-at,
+  title         = "Tensor networks and graphical calculus for open quantum
+                   systems",
+  author        = "Wood, Christopher J and Biamonte, Jacob D and Cory, David G",
+  abstract      = "We describe a graphical calculus for completely positive
+                   maps and in doing so review the theory of open quantum
+                   systems and other fundamental primitives of quantum
+                   information theory using the language of tensor networks. In
+                   particular we demonstrate the construction of tensor
+                   networks to pictographically represent the
+                   Liouville-superoperator, Choi-matrix, process-matrix, Kraus,
+                   and system-environment representations for the evolution of
+                   quantum states, review how these representations
+                   interrelate, and illustrate how graphical manipulations of
+                   the tensor networks may be used to concisely transform
+                   between them. To further demonstrate the utility of the
+                   presented graphical calculus we include several examples
+                   where we provide arguably simpler graphical proofs of
+                   several useful quantities in quantum information theory
+                   including the composition and contraction of multipartite
+                   channels, a condition for whether an arbitrary bipartite
+                   state may be used for ancilla assisted process tomography,
+                   and the derivation of expressions for the average gate
+                   fidelity and entanglement fidelity of a channel in terms of
+                   each of the different representations of the channel.",
+  month         =  nov,
+  year          =  2011,
+  keywords      = "master-thesis;qec-tnd",
+  archivePrefix = "arXiv",
+  primaryClass  = "quant-ph",
+  eprint        = "1111.6950"
+}
+
+@ARTICLE{Gidney2022-si,
+  title         = "Benchmarking the Planar Honeycomb Code",
+  author        = "Gidney, Craig and Newman, Michael and McEwen, Matt",
+  abstract      = "We improve the planar honeycomb code by describing
+                   boundaries that need no additional physical connectivity,
+                   and by optimizing the shape of the qubit patch. We then
+                   benchmark the code using Monte Carlo sampling to estimate
+                   logical error rates and derive metrics including thresholds,
+                   lambdas, and teraquop qubit counts. We determine that the
+                   planar honeycomb code can create a logical qubit with
+                   one-in-a-trillion logical error rates using 7000 physical
+                   qubits at a 0.1\% gate-level error rate (or 900 physical
+                   qubits given native two-qubit parity measurements). Our
+                   results cement the honeycomb code as a promising candidate
+                   for two-dimensional qubit architectures with sparse
+                   connectivity.",
+  month         =  feb,
+  year          =  2022,
+  keywords      = "master-thesis;qec-tnd",
+  archivePrefix = "arXiv",
+  primaryClass  = "quant-ph",
+  eprint        = "2202.11845"
+}
+
+@ARTICLE{Chamberland2022-ei,
+  title         = "Techniques for combining fast local decoders with global
+                   decoders under circuit-level noise",
+  author        = "Chamberland, Christopher and Goncalves, Luis and Sivarajah,
+                   Prasahnt and Peterson, Eric and Grimberg, Sebastian",
+  abstract      = "Implementing algorithms on a fault-tolerant quantum computer
+                   will require fast decoding throughput and latency times to
+                   prevent an exponential increase in buffer times between the
+                   applications of gates. In this work we begin by quantifying
+                   these requirements. We then introduce the construction of
+                   local neural network (NN) decoders using three-dimensional
+                   convolutions. These local decoders are adapted to
+                   circuit-level noise and can be applied to surface code
+                   volumes of arbitrary size. Their application removes errors
+                   arising from a certain number of faults, which serves to
+                   substantially reduce the syndrome density. Remaining errors
+                   can then be corrected by a global decoder, such as Blossom
+                   or Union Find, with their implementation significantly
+                   accelerated due to the reduced syndrome density. However, in
+                   the circuit-level setting, the corrections applied by the
+                   local decoder introduce many vertical pairs of highlighted
+                   vertices. To obtain a low syndrome density in the presence
+                   of vertical pairs, we consider a strategy of performing a
+                   syndrome collapse which removes many vertical pairs and
+                   reduces the size of the decoding graph used by the global
+                   decoder. We also consider a strategy of performing a
+                   vertical cleanup, which consists of removing all local
+                   vertical pairs prior to implementing the global decoder.
+                   Lastly, we estimate the cost of implementing our local
+                   decoders on Field Programmable Gate Arrays (FPGAs).",
+  month         =  aug,
+  year          =  2022,
+  keywords      = "master-thesis;qec-tnd",
+  copyright     = "http://creativecommons.org/licenses/by/4.0/",
+  archivePrefix = "arXiv",
+  primaryClass  = "quant-ph",
+  eprint        = "2208.01178"
+}
+
+@MISC{Radzihovsky2015-mo,
+  title    = "Introduction to Quenched Disorder",
+  author   = "Radzihovsky, Leo",
+  month    =  jul,
+  year     =  2015,
+  keywords = "qec-tnd"
+}
+
+@MISC{Lu2017-oc,
+  title        = "The Nishimori line in the random bond Ising model",
+  author       = "Lu, Peter Y",
+  abstract     = "The random bond Ising model (RBIM) serves as a key example of
+                  an inhomogenous system with nontrivial phase transitions. An
+                  important aid to our theoretical understanding of the RBIM is
+                  the Nishimori line, which is derived from a gauge
+                  transformation of the RBIM that allows for the exact
+                  calcuation of certain physical properties along a particular
+                  manifold. We review the results of this discovery and
+                  describe several applications of the Nishimori line in the
+                  two-dimensional RBIM.",
+  year         =  2017,
+  howpublished = "\url{http://web.mit.edu/8.334/www/grades/projects/projects17/PeterLu.pdf}",
+  note         = "Accessed: 2022-9-12",
+  keywords     = "qec-tnd"
+}
+
+@MASTERSTHESIS{Breuckmann2011-br,
+  title    = "Quantum Subsystem Codes",
+  author   = "Breuckmann, Nikolas",
+  month    =  sep,
+  year     =  2011,
+  school   = "RWTH Aachen",
+  keywords = "master-thesis;qec-tnd"
 }

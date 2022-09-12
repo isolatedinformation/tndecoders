@@ -4,7 +4,9 @@
 \begin{itemize}
     \item Chubb2021\cite{Chubb2021-se} discusses tensor networking decoding of 2D local codes. These are under phenomenological noise models for bit-flip, phase-flip and depolarizing noise. This is the results to replicate by mid October
     \item  BSV2014\cite{Bravyi2014-kw} discusses the equivalence between maximum Likelihood decoding and tensor network contraction.
-    \item
+    \item Conservartion Laws and QEC\cite{Brown2022-hg} is a very good review on decoding and different methods and discusses generalizing it for LDPC Codes
+    \item On MLD with circuit-level errors\cite{Pryadko2019-bg} gives a description for MLD given a measurement circuit.
+    \item appendix from google's jul 2022\cite{Acharya2022-ev} on scaling up the surface code.
 \end{itemize}
 
 
@@ -13,17 +15,27 @@
     \item Quantum Lego\cite{Cao2022-xf} considers building quantum error correcting codes as tensor networks.
     \item TN Codes\cite{Farrelly2021-da} introduces tensor network stabilizer codes.
     \item Hand-Wavy\cite{Bridgeman2017-rk} is an introduction to Tensor Networks.
+    \item review on area laws of entanglement entropy\cite{Eisert2010-pq}
+    \item Parallel decoding in tensor-network codes\cite{Farrelly2022-yz} \todo[inline]{to read later}
+    \item Biamonte's textbook on Quantum Tensor Networks\cite{Biamonte2019-xf}
+    \item TenPy lecture notes on  Tensor Networks\cite{Hauschild2018-lu}
+    \item DMRG review using tensor networks\cite{Schollwoeck2010-uf}
+    \item Computational Studies of Quantum Spin Systems, review on Monte Carlo and different algorithms\cite{Sandvik2011-md}
 \end{itemize}
 
-\section{Noise Models and Simulations}\label{sec: noise-models-lit-rev}
+\section{Noise Models, Codes and Simulations}\label{sec: noise-models-lit-rev}
 \begin{itemize}
     \item Stim\cite{Gidney2021-am} is probably the backend we are going to be using to generate noise data.
-    \item
+    \item Chamberland2022\cite{Chamberland2022-ei} has a section on defining what circuit level noise is. Local vs Global decoders and their combination is discussed.
+    \item Honeycomb Code\cite{Gidney2022-si} is benchmaked using Stim in this paper. It also discusses standard metrics in benchmarking QEC codes like logical error rates, thresholds, \textcolor{red}{lambdas and teraquop qubit counts}
+    \item Niko's ug thesis on subsystem codes\cite{Breuckmann2011-br}
 \end{itemize}
 
 \section{Stat Mech}\label{sec: stat-mech-lit-rev}
 \begin{itemize}
     \item DLKP's\cite{Dennis2002-wo} paper on Topological Quantum Memory is one of the first paper to discuss the statistical physics of error recovery.
     \item Infamous-Chubb-Flammia\cite{Chubb2018-gh} generalises the proof for the statistical mechanical mapping from DLKP\cite{Dennis2002-wo} for independent noise to weakly correlated noise. It also discusses the link between Maximum Likelihood Decoding and Tensor Network Contraction.
-    \item
+    \item The Nishimory Line in the RBIM\cite{Lu2017-oc} is a review on the Nishimori Line in the two dimensional Random Bond Ising Model.
+    \item Disorder\cite{Radzihovsky2015-mo} is a review from a 2015 summer school on disorder in condensed matter systems.
+    \item 3D color codes via stat-mech mapping\cite{Kubica2018-ts} studies the disorder temperature phase transition diagram using 2 new models: 4-body and 6-body 3D RBIM.
 \end{itemize}

@@ -1,3 +1,4 @@
 #!/bin/bash
 
-while true; do wget --content-disposition -N https://paperpile.com/eb/LPCxUMfjjI; sleep 60; done
+wget --content-disposition -N https://paperpile.com/eb/LPCxUMfjjI # qec-tnd
+wget --content-disposition -N https://paperpile.com/eb/boaToArEwj # master-thesis
