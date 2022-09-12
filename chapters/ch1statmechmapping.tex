@@ -1,0 +1,48 @@
+\chapter{Statistical Mechanical Mapping of QEC Codes}\label{ch:statmechmapping}
+
+\section{The Statistical Physics of Error Recovery}\label{sec:ft-conditions}
+\textbf{Conditions and Assumptions about Fault Tolerance}\cite{dlkp2002}
+\begin{itemize}
+    \item Constant Error Rate
+    \item Weakly correlated errors
+    \item Parallel Operation
+    \item Resuable Memory
+    \item Fast Measurements
+    \item Fast and accurate classical processing
+    \item No leakage, however leakage errors do exist and we have to deal with them
+    \item Non local quantum gates
+    \item However if local gates are only available, a high coordination number is demanded. (a lot more nearest neighbors per qubit)
+\end{itemize}
+
+An order parameter is formulated that distinguishes two phases of a quantum memory. 
+\begin{itemize}
+    \item ``ordered'' phase: reliable storage of encoded quantum information is possible.
+    \item ``disordered'' phase: errors afflict the encoded quantum information.
+\end{itemize}
+
+\subsection*{The Error Model used}
+We assume that \(X\) and \(Z\) errors are equally likely with probability \(p\) and these are uncorrelated and independent. The error channel is then represented as 
+\begin{equation}
+    \rho \rightarrow (1-p)^2 I \rho I + p(1-p)X \rho X + p(1-p)Z\rho Z+ p^2Y \rho Y
+\end{equation}
+
+Measurement errors are also allowed to occur. The probability that a particular sydrome bit is faulty is \(q\). Measurement errors are also uncorrelated with qubit errors in both time and space.
+
+
+
+
+\section{Statistical Mechanical Model}\label{sec:sec1-name}
+
+A classical spin model and its' statistical mechanical properties capture the error correction properties of the quantum code, in a way that the threshold of the error correcting code is the phase transition of the classical spin model.\cite{chubbflammia2021, dlkp2002}
+
+\begin{definition}[Stat Mech Hamiltonian: \textit{independent noise}]
+    For a Pauli E \(\in P^(\times n)\), and coupling strengths \( \{ J_i: \mathcal{P}_i \rightarrow \mathrm{R} \}_i \), the hamilition of a spin configuration \( \vec{c}\) is given as 
+    \[
+        H_E(\vec{c}) = - \sum_{i, \sigma \in  \mathcal{P}_i} J_i(\sigma) \comm{\sigma}{E} \prod_{k} \comm{\sigma}{S_k}^{c_k}
+    \]
+\end{definition}
+The sum is taken over all the sites \(i\) and all elements \( \sigma \) in the single site Pauli group at site \(i\). The commutator used here is the scalar commutator, which is defined as 
+\begin{equation}
+    \mathrm{\comm{A}{B}}
+\end{equation}
+

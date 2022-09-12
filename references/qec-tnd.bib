@@ -1,0 +1,345 @@
+@ARTICLE{Chubb2021-se,
+  title         = "General tensor network decoding of {2D} Pauli codes",
+  author        = "Chubb, Christopher T",
+  abstract      = "In this work we develop a general tensor network decoder for
+                   2D codes. Specifically, we propose a decoder that
+                   approximates maximally likelihood decoding for 2D stabiliser
+                   and subsystem codes subject to Pauli noise. For a code
+                   consisting of $n$ qubits our decoder has a runtime of
+                   $O(n\log n+n\chi^3)$, where $\chi$ is an approximation
+                   parameter. We numerically demonstrate the power of this
+                   decoder by studying four classes of codes under three noise
+                   models, namely regular surface codes, irregular surface
+                   codes, subsystem surface codes and colour codes, under
+                   bit-flip, phase-flip and depolarising noise. We show that
+                   the thresholds yielded by our decoder are state-of-the-art,
+                   and numerically consistent with optimal thresholds where
+                   available, suggesting that the tensor network decoder well
+                   approximates optimal decoding in all these cases. Novel to
+                   our decoder is an efficient and effective approximate
+                   contraction scheme for arbitrary 2D tensor networks, which
+                   may be of independent interest. We have also released an
+                   implementation of this algorithm as a stand-alone Julia
+                   package: SweepContractor.jl.",
+  month         =  jan,
+  year          =  2021,
+  keywords      = "master-thesis;qec-tnd",
+  archivePrefix = "arXiv",
+  primaryClass  = "quant-ph",
+  eprint        = "2101.04125"
+}
+
+@ARTICLE{Cao2022-xf,
+  title     = "Quantum Lego: Building Quantum Error Correction Codes from
+               Tensor Networks",
+  author    = "Cao, Chunjun and Lackey, Brad",
+  journal   = "PRX Quantum",
+  publisher = "American Physical Society",
+  volume    =  3,
+  number    =  2,
+  pages     = "020332",
+  month     =  may,
+  year      =  2022,
+  keywords  = "master-thesis;qec-tnd"
+}
+
+@ARTICLE{Dennis2002-wo,
+  title     = "Topological quantum memory",
+  author    = "Dennis, Eric and Kitaev, Alexei and Landahl, Andrew and
+               Preskill, John",
+  abstract  = "We analyze surface codes, the topological quantum
+               error-correcting codes introduced by Kitaev. In these codes,
+               qubits are arranged in a two-dimensional array on a surface of
+               nontrivial topology, and encoded quantum operations are
+               associated with nontrivial homology cycles of the surface. We
+               formulate protocols for error recovery, and study the efficacy
+               of these protocols. An order-disorder phase transition occurs in
+               this system at a nonzero critical value of the error rate; if
+               the error rate is below the critical value (the accuracy
+               threshold), encoded information can be protected arbitrarily
+               well in the limit of a large code block. This phase transition
+               can be accurately modeled by a three-dimensional Z2 lattice
+               gauge theory with quenched disorder. We estimate the accuracy
+               threshold, assuming that all quantum gates are local, that
+               qubits can be measured rapidly, and that polynomial-size
+               classical computations can be executed instantaneously. We also
+               devise a robust recovery procedure that does not require
+               measurement or fast classical processing; however, for this
+               procedure the quantum gates are local only if the qubits are
+               arranged in four or more spatial dimensions. We discuss
+               procedures for encoding, measurement, and performing
+               fault-tolerant universal quantum computation with surface codes,
+               and argue that these codes provide a promising framework for
+               quantum computing architectures.",
+  journal   = "J. Math. Phys.",
+  publisher = "American Institute of Physics",
+  volume    =  43,
+  number    =  9,
+  pages     = "4452--4505",
+  month     =  sep,
+  year      =  2002,
+  keywords  = "master-thesis;qec-tnd"
+}
+
+@ARTICLE{Gidney2021-am,
+  title         = "Stim: a fast stabilizer circuit simulator",
+  author        = "Gidney, Craig",
+  abstract      = "This paper presents ``Stim``, a fast simulator for quantum
+                   stabilizer circuits. The paper explains how Stim works and
+                   compares it to existing tools. With no foreknowledge, Stim
+                   can analyze a distance 100 surface code circuit (20 thousand
+                   qubits, 8 million gates, 1 million measurements) in 15
+                   seconds and then begin sampling full circuit shots at a rate
+                   of 1 kHz. Stim uses a stabilizer tableau representation,
+                   similar to Aaronson and Gottesman's CHP simulator, but with
+                   three main improvements. First, Stim improves the asymptotic
+                   complexity of deterministic measurement from quadratic to
+                   linear by tracking the \{\textbackslashem inverse\} of the
+                   circuit's stabilizer tableau. Second, Stim improves the
+                   constant factors of the algorithm by using a cache-friendly
+                   data layout and 256 bit wide SIMD instructions. Third, Stim
+                   only uses expensive stabilizer tableau simulation to create
+                   an initial reference sample. Further samples are collected
+                   in bulk by using that sample as a reference for batches of
+                   Pauli frames propagating through the circuit.",
+  month         =  mar,
+  year          =  2021,
+  keywords      = "master-thesis;qec-tnd",
+  archivePrefix = "arXiv",
+  primaryClass  = "quant-ph",
+  eprint        = "2103.02202"
+}
+
+@ARTICLE{Bridgeman2017-rk,
+  title     = "Hand-waving and interpretive dance: an introductory course on
+               tensor networks",
+  author    = "Bridgeman, Jacob C and Chubb, Christopher T",
+  abstract  = "The curse of dimensionality associated with the Hilbert space of
+               spin systems provides a significant obstruction to the study of
+               condensed matter systems. Tensor networks have proven an
+               important tool in attempting to overcome this difficulty in both
+               the numerical and analytic regimes. These notes form the basis
+               for a seven lecture course, introducing the basics of a range of
+               common tensor networks and algorithms. In particular, we cover:
+               introductory tensor network notation, applications to quantum
+               information, basic properties of matrix product states, a
+               classification of quantum phases using tensor networks,
+               algorithms for finding matrix product states, basic properties
+               of projected entangled pair states, and multiscale entanglement
+               renormalisation ansatz states. The lectures are intended to be
+               generally accessible, although the relevance of many of the
+               examples may be lost on students without a background in
+               many-body physics/quantum information. For each lecture, several
+               problems are given, with worked solutions in an ancillary file.",
+  journal   = "J. Phys. A: Math. Theor.",
+  publisher = "IOP Publishing",
+  volume    =  50,
+  number    =  22,
+  pages     = "223001",
+  month     =  may,
+  year      =  2017,
+  keywords  = "master-thesis;qec-tnd",
+  language  = "en"
+}
+
+@ARTICLE{Chubb2018-gh,
+  title         = "Statistical mechanical models for quantum codes with
+                   correlated noise",
+  author        = "Chubb, Christopher T and Flammia, Steven T",
+  abstract      = "We give a broad generalisation of the mapping, originally
+                   due to Dennis, Kitaev, Landahl and Preskill, from quantum
+                   error correcting codes to statistical mechanical models. We
+                   show how the mapping can be extended to arbitrary stabiliser
+                   or subsystem codes subject to correlated Pauli noise models,
+                   including models of fault tolerance. This mapping connects
+                   the error correction threshold of the quantum code to a
+                   phase transition in the statistical mechanical model. Thus,
+                   any existing method for finding phase transitions, such as
+                   Monte Carlo simulations, can be applied to approximate the
+                   threshold of any such code, without having to perform
+                   optimal decoding. By way of example, we numerically study
+                   the threshold of the surface code under mildly correlated
+                   bit-flip noise, showing that noise with bunching
+                   correlations causes the threshold to drop to
+                   $p_\{\textrm\{corr\}\}=10.04(6)\%$, from its known iid value
+                   of $p_\{\text\{iid\}\}=10.917(3)\%$. Complementing this, we
+                   show that the mapping also allows us to utilise any
+                   algorithm which can calculate/approximate partition
+                   functions of classical statistical mechanical models to
+                   perform optimal/approximately optimal decoding.
+                   Specifically, for 2D codes subject to locally correlated
+                   noise, we give a linear-time tensor network-based algorithm
+                   for approximate optimal decoding which extends the MPS
+                   decoder of Bravyi, Suchara and Vargo.",
+  month         =  sep,
+  year          =  2018,
+  keywords      = "master-thesis;QEC;qec-tnd",
+  copyright     = "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+  archivePrefix = "arXiv",
+  primaryClass  = "quant-ph",
+  eprint        = "1809.10704"
+}
+
+@ARTICLE{Bravyi2014-kw,
+  title         = "Efficient algorithms for maximum likelihood decoding in the
+                   surface code",
+  author        = "Bravyi, Sergey and Suchara, Martin and Vargo, Alexander",
+  abstract      = "We describe two implementations of the optimal error
+                   correction algorithm known as the maximum likelihood decoder
+                   (MLD) for the 2D surface code with a noiseless syndrome
+                   extraction. First, we show how to implement MLD exactly in
+                   time $O(n^2)$, where $n$ is the number of code qubits. Our
+                   implementation uses a reduction from MLD to simulation of
+                   matchgate quantum circuits. This reduction however requires
+                   a special noise model with independent bit-flip and
+                   phase-flip errors. Secondly, we show how to implement MLD
+                   approximately for more general noise models using matrix
+                   product states (MPS). Our implementation has running time
+                   $O(n\chi^3)$ where $\chi$ is a parameter that controls the
+                   approximation precision. The key step of our algorithm,
+                   borrowed from the DMRG method, is a subroutine for
+                   contracting a tensor network on the two-dimensional grid.
+                   The subroutine uses MPS with a bond dimension $\chi$ to
+                   approximate the sequence of tensors arising in the course of
+                   contraction. We benchmark the MPS-based decoder against the
+                   standard minimum weight matching decoder observing a
+                   significant reduction of the logical error probability for
+                   $\chi\ge 4$.",
+  month         =  may,
+  year          =  2014,
+  keywords      = "master-thesis;QEC;qec-tnd",
+  copyright     = "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+  archivePrefix = "arXiv",
+  primaryClass  = "quant-ph",
+  eprint        = "1405.4883"
+}
+
+@ARTICLE{Farrelly2022-yz,
+  title     = "Parallel decoding of multiple logical qubits in tensor-network
+               codes",
+  author    = "Farrelly, Terry and Milicevic, Nicholas and Harris, Robert J and
+               McMahon, Nathan A and Stace, Thomas M",
+  journal   = "Phys. Rev. A",
+  publisher = "American Physical Society",
+  volume    =  105,
+  number    =  5,
+  pages     = "052446",
+  month     =  may,
+  year      =  2022,
+  keywords  = "master-thesis;qec-tnd"
+}
+
+@ARTICLE{Farrelly2021-da,
+  title    = "{Tensor-Network} Codes",
+  author   = "Farrelly, Terry and Harris, Robert J and McMahon, Nathan A and
+              Stace, Thomas M",
+  abstract = "We introduce tensor-network stabilizer codes which come with a
+              natural tensor-network decoder. These codes can correspond to any
+              geometry, but, as a special case, we generalize holographic codes
+              beyond those constructed from perfect or block-perfect
+              isometries, and we give an example that corresponds to neither.
+              Using the tensor-network decoder, we find a threshold of 18.8\%
+              for this code under depolarizing noise. We show that, for
+              holographic codes, the exact tensor-network decoder (with no
+              bond-dimension truncation) has polynomial complexity in the
+              number of physical qubits, even for locally correlated noise,
+              making this the first efficient decoder for holographic codes
+              against Pauli noise and, also, a rare example of a decoder that
+              is both efficient and exact.",
+  journal  = "Phys. Rev. Lett.",
+  volume   =  127,
+  number   =  4,
+  pages    = "040507",
+  month    =  jul,
+  year     =  2021,
+  keywords = "master-thesis;qec-tnd",
+  language = "en"
+}
+
+@ARTICLE{Terry_Farrelly_David_K_Tuckett_and_Thomas_M_Stace_undated-su,
+  title    = "Local tensor-network codes",
+  author   = "{Terry Farrelly David K Tuckett and Thomas M Stace}",
+  keywords = "master-thesis;qec-tnd"
+}
+
+@ARTICLE{Jahn2021-lb,
+  title     = "Holographic tensor network models and quantum error correction:
+               a topical review",
+  author    = "Jahn, Alexander and Eisert, Jens",
+  abstract  = "Recent progress in studies of holographic dualities, originally
+               motivated by insights from string theory, has led to a
+               confluence with concepts and techniques from quantum information
+               theory. A particularly successful approach has involved
+               capturing holographic properties by means of tensor networks
+               which not only give rise to physically meaningful correlations
+               of holographic boundary states, but also reproduce and refine
+               features of quantum error correction in holography. This topical
+               review provides an overview over recent successful realizations
+               of such models. It does so by building on an introduction of the
+               theoretical foundations of AdS/CFT and necessary quantum
+               information concepts, many of which have themselves developed
+               into independent, rapidly evolving research fields.",
+  journal   = "Quantum Sci. Technol.",
+  publisher = "IOP Publishing",
+  volume    =  6,
+  number    =  3,
+  pages     = "033002",
+  month     =  jun,
+  year      =  2021,
+  keywords  = "master-thesis;qec-tnd",
+  language  = "en"
+}
+
+@ARTICLE{Cupjin_Huang_Fang_Zhang_Michael_Newman_Xiaotong_Ni_Dawei_Ding_Junjie_Cai_Xun_Gao_Tenghui_Wang_Feng_Wu_Gengyan_Zhang_Hsiang-Sheng_Ku_Zhengxiong_Tian_Junyin_Wu_Haihong_Xu_Huanjun_Yu_Bo_Yuan_Mario_Szegedy_Yaoyun_Shi_Hui-Hai_Zhao_Chunqing_Deng_and_Jianxin_Chen_undated-wo,
+  title    = "Efficient parallelization of tensor network contraction for
+              simulating quantum computation",
+  author   = "{Cupjin Huang, Fang Zhang, Michael Newman, Xiaotong Ni, Dawei
+              Ding , Junjie Cai, Xun Gao, Tenghui Wang, Feng Wu, Gengyan Zhang,
+              Hsiang-Sheng Ku, Zhengxiong Tian, Junyin Wu, Haihong Xu, Huanjun
+              Yu, Bo Yuan, Mario Szegedy, Yaoyun Shi , Hui-Hai Zhao, Chunqing
+              Deng and Jianxin Chen}",
+  keywords = "master-thesis;qec-tnd"
+}
+
+@ARTICLE{Fishman2020-aq,
+  title         = "The {ITensor} Software Library for Tensor Network
+                   Calculations",
+  author        = "Fishman, Matthew and White, Steven R and Miles Stoudenmire,
+                   E",
+  abstract      = "ITensor is a system for programming tensor network
+                   calculations with an interface modeled on tensor diagram
+                   notation, which allows users to focus on the connectivity of
+                   a tensor network without manually bookkeeping tensor
+                   indices. The ITensor interface rules out common programming
+                   errors and enables rapid prototyping of tensor network
+                   algorithms. After discussing the philosophy behind the
+                   ITensor approach, we show examples of each part of the
+                   interface including Index objects, the ITensor product
+                   operator, tensor factorizations, tensor storage types,
+                   algorithms for matrix product state (MPS) and matrix product
+                   operator (MPO) tensor networks, quantum number conserving
+                   block-sparse tensors, and the NDTensors library. We also
+                   review publications that have used ITensor for quantum
+                   many-body physics and for other areas where tensor networks
+                   are increasingly applied. To conclude we discuss promising
+                   features and optimizations to be added in the future.",
+  month         =  jul,
+  year          =  2020,
+  keywords      = "Tensor Networks;qec-tnd",
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.MS",
+  eprint        = "2007.14822"
+}
+
+@ARTICLE{Eisert2010-pq,
+  title     = "Colloquium: Area laws for the entanglement entropy",
+  author    = "Eisert, J and Cramer, M and Plenio, M B",
+  journal   = "Rev. Mod. Phys.",
+  publisher = "American Physical Society",
+  volume    =  82,
+  number    =  1,
+  pages     = "277--306",
+  month     =  feb,
+  year      =  2010,
+  keywords  = "Tensor Networks;qec-tnd"
+}

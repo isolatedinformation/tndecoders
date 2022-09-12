@@ -4,6 +4,7 @@
 \usepackage{amsmath,amsfonts,amsthm}
 \usepackage[a4paper, top=30mm, bottom=25mm, right=30mm, left=25mm]{geometry}
 % \usepackage{qcircuit}
+\usepackage{fontenc}
 \usepackage{graphicx}
 \usepackage[english]{babel}
 \usepackage{lipsum}
@@ -16,10 +17,15 @@
 \usepackage{braket}
 \usepackage{csquotes}
 \usepackage[textwidth = 20mm]{todonotes}
+\usepackage{physics}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
 % \usepackage{svg}
 \usepackage[backend=biber, giveninits=true]{biblatex}
 % \SetCiteCommand{\autocite}
 \addbibresource{references/references.bib}
+\addbibresource{references/qec-tnd.bib}
 
 \usepackage[colorlinks=true]{hyperref}
 %% Custom commands %%
@@ -32,8 +38,8 @@
 \begin{document}
 
 \begin{titlepage}
-    \title{Dummy Title}
-    \author{Dummy author}
+    \title{Tensor Network Decoders for Quantum Error Correcting Codes}
+    \author{Varun Seshadri}
     \date{\today}
 \end{titlepage}
 \maketitle
@@ -44,8 +50,9 @@
 \listoftodos\todo{remove todo list when doc is complete}
 
 %% Add lline \input{chapters/chaptername.tex} to add chapter to the tex file%%
-\input{chapters/chapterone.tex}
-\input{chapters/chaptertwo.tex}
+\input{chapters/literature_review.tex}
+\input{chapters/ch1statmechmapping.tex}
+\input{chapters/ch2noisemodels.tex}
 
 
 % \todo{Add references to sections}
@@ -54,9 +61,10 @@
 
 % References%
 \newpage
-\newgeometry{top=10mm, bottom=20mm, right=25mm, left=25mm}
+% \newgeometry{top=10mm, bottom=20mm, right=25mm, left=25mm}
 \addcontentsline{toc}{chapter}{References}
-\printbibliography[title=References]
+\nocite{*}
+\printbibliography[title=\refname]
 
 \restoregeometry
 \newpage
