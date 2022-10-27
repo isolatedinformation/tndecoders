@@ -1,0 +1,24 @@
+\chapter{Contracting Tensor Networks in the context of Quantum Error Correction}
+
+We are only considering the Tensor Networks built from the coset notation of BSV and Tensor Network Codes of Thomas Stace. What are my critical resources
+\begin{enumerate}
+    \item Quantum Legos appendix and sec II.E
+    \item Tensor Network Codes, appendix
+    \item Tensor Networks and Quantum Error Correction
+    \item Local Tensor Network codes
+    \item Pararllel decoding of multiple logical qubits
+    \item On maximum likelihood decoding in circuit-level errors
+\end{enumerate}
+
+There are different types of tensor network decoders for different codes. There are the Branching MERA codes from Poulin. Condstructing stabilizer codes from an initial seed. BSV uses an MPS representation. Chubb and Flammia uses a PEPS representation. Poulin in later simulations of the surface codes uses a PEPO representation. 
+
+Questions:
+\begin{enumerate}
+    \item The dotted square box is the probabiliy distribution after the error acts. This is what is conveyed there. How to interpret this
+\end{enumerate}
+
+\begin{quote}
+    We  model  the  noise  by  assigning  a  probability $P_n (E = E_1 \otimes E_2 \dotsb E_n) = \mathcal{E}(E_1) \mathcal{E}(E_2) \dotsb \mathcal{E}(E_n)$  to  each element $E$ of the Pauli group, where $\mathcal{E}(E_i)$ is a probability distribution. Hence, $\mathcal{E}$ is represented by a rank-one tensor of bond dimension 4, i.e., $\mathcal{E} = (p_I,p_X, p_Y, p_Z)$. Consider the  distribution $Q_n(E) = P_n(U^{-1}EU)$ corresponding  to  the distribution  of errors  after  the  de-encoding circuit $U^{−1}$. This distribution is obtained by contracting the encoding circuit (viewed as a rank $2n$ tensor) with the $\mathcal{E}$’s, c.f. Fig. 1(c). To decode, we need to condition this probability distribution on the observed error syndrome, and we typically decode one qubit at a time for efficiency reasons.
+\end{quote}
+
+Let's break this quote line by line. \todo[inline]{Make mptikz work with the make diagrams soon}. Each qubit has a indiviual Pauli Channel acting on it. This means the each qubit has a distribution $\mathcal{E}$ associated with it. \textit{FP} suggest that by contracting these probability distribution tensors with the "encoding unitary", you get the output probability distribution. \todo[inline]{Write a proof for this!} Since the output is a probability distribution, it must be a bond dimension 4 tensor. The question then becomes what is happening in the dotted box. The bimodal indicator functions don't yet come it play. The explanation with the pink legs coming out the P block, has the problem that it is not compatible with the diagram from \textit{FP} which has the dangling legs coming from the unitary and not the probability distribution tensor. 
