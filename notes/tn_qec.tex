@@ -1,0 +1,86 @@
+\documentclass[%
+ reprint,
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+%preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+amsmath,amssymb,
+aps,
+pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+
+\begin{document}
+
+\preprint{APS/123-QED}
+
+\title{Tensor Network Methods in Quantum Error Correction}% Force line breaks with \\
+% \thanks{A footnote to the article title}%
+
+\author{Varun Seshadri }
+
+\date{\today}
+
+\begin{abstract}
+    This is a short review on the different tensor network methods used in Quantum Error Correction.
+    This was done while trying to resolve the dimension incompatibility issue in [FP2014]. Let's see what this leads to
+
+\end{abstract}
+
+%\keywords{Suggested keywords}%Use showkeys class option if keyword
+%display desired
+\maketitle
+
+\section{MPS/MPO representations of topological codes}
+\begin{itemize}
+    \item BSV 14
+    \item CF 12
+    \item Chubb 2021
+\end{itemize}
+
+
+\section{PEPS representations of the topological codes}
+\begin{itemize}
+    \item DP 2017 for the surface codes.
+    \item There was some other paper that used a PEPO representation, but I am unable to find it.
+\end{itemize}
+
+\section{Channel State Represenation}
+\begin{itemize}
+    \item FP 2014
+    \item DP 2017
+\end{itemize}
+
+\section{Seed codes to construct QEC Codes}
+\begin{itemize}
+    \item The whole 9 yards from Terry Farrelly,
+    \item Quantum Lego from Cao Lackey
+    \item The whole shenanigans of Holographic codes
+\end{itemize}
+%\tableofcontents
+\end{document}
