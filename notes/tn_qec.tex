@@ -5,14 +5,15 @@
 %unsortedaddress,
 %runinaddress,
 %frontmatterverbose, 
-%preprint,
+% preprint,
 %preprintnumbers,
 %nofootinbib,
 %nobibnotes,
 %bibnotes,
 amsmath,amssymb,
 aps,
-pra,
+onecolumn,
+% pra,
 %prb,
 %rmp,
 %prstab,
@@ -20,6 +21,10 @@ pra,
 %floatfix,
 ]{revtex4-2}
 
+\usepackage[dvipsnames]{xcolor}
+\usepackage{braket}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
@@ -82,5 +87,56 @@ pra,
     \item Quantum Lego from Cao Lackey
     \item The whole shenanigans of Holographic codes
 \end{itemize}
-%\tableofcontents
+
+
+\section{On Stabilizer Channels}
+Ferris in a talk titled, "Tensor Networks and Coding Theory", posits a channel picture for the decoding problem, wherein he introduces, stabilizer channels. The figure below illustrates his thoughts.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.3]{../assets/decoding_gate_picture.png}
+    \caption{Gate Picture of the Decoding problem. \textcolor{BrickRed}{What are the stabilizers in this picture?}}
+    \label{fig:decode-gate-picture}
+\end{figure}
+
+In Fig. \ref{fig:decode-gate-picture}, you have tensor networks picture of the following process described in the equation below.
+\begin{equation*}
+    \rho \rightarrow Encode \rightarrow Error \rightarrow De-Encode \rightarrow Measure/Decode
+\end{equation*}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.3]{../assets/decoding_channel_picture.png}
+    \caption{Channel Picture of the Decoding problem. \textcolor{BrickRed}{What are the stabilizers in this picture?}}
+    \label{fig:decode-channel-picture}
+\end{figure}
+
+
+\begin{quote}
+    Thoughts from Alex Müller Hermes. For the Pauli Channel picture, Poulin is probably using one of the following. 
+    \begin{align*}
+        \rho \rightarrow \sum_{i = {0,1 2,3}} p_i Tr(\sigma_i \rho) \\
+        \rho \rightarrow \sum_{i = {0,1 2,3}} p_i  \sigma_i \rho \sigma_i  \\
+    \end{align*}
+    In the end, this makes sense, because he is just re-orderding the tensor network in a different way. He did say something along the lines of prepare and measure $\ket{0}$.
+\end{quote}
+
+\textbf{How does $e = (1,1,1,1)$ correspond to the partial trace operations?}
+\begin{itemize}
+    \item If I just do it for single qubit line, it should correspond to the trace operation.
+    \item If I do it for a bell pair, the partical trace should give me a maximally mixed state.
+\end{itemize}
+
+\textbf{How does $b_z =(1,0,0,1)$ and $\bar{b_z} = (0,1,1,0)$ correspond to syndromes 0 and 1 respectively?}
+One construct $b_z$ by the measure and prepare hypothesis. This being, if you prepare it in one of the eigenstate of the measurement basis, then it stays in the same eigenstate when there is no error. The nomenclature Quantum Stabilizer Channels makes no sense as it's a misnomer and can lead to the reader thinking this channel auto reverts from the onset of an error to one of the stabilizer states. 
+
+
+
+
+\section{On indicator functions}
+In appendix A of DP 2017, the author provide a presricption for representing a channel using a $4 \times 4$ process matrix. This section tries to reason how one may arrive at the indicator functions taking advantage of the channel-state duality offered by the Choi-Jamiolkowski Isomorphism. Ferris, in his talk on Tensor Networks and Quantum Error Correction, reposed the decoding channel in terms of channels. In partcular, he has asks: Given knowledge of some stabilizer channels, what the logical channel of the data qubits or the logical channel of the logical qubits. Poulin's reuses this framework in Tensor Networks Simulations of the Surface Code, in his 2017 paper Darmawan. 
+
+
+Biamonte in his lectures on Quantum Tensor Networks, shows how to model the Choi Jamilowski Isomorphism as Tensor Network, adding an extra index for each qubit. 
+
 \end{document}
