@@ -90,7 +90,7 @@ onecolumn,
 
 
 \section{On Stabilizer Channels}
-Ferris in a talk titled, "Tensor Networks and Coding Theory", posits a channel picture for the decoding problem, wherein he introduces, stabilizer channels. The figure below illustrates his thoughts.
+Ferris in a talk titled, "Tensor Networks and Coding Theory", posits a channel picture for the decoding problem, wherein he introduces, stabilizer channels. The figure below illustrates his thoughts. Alex M-Hermes comments that this notation is misleading. I concur with this argument, especially w.r.t to the way, this notation was used in a paper in Quatum Thermodynamics paper titled Stabilizer channels. 
 
 \begin{figure}[ht]
     \centering
@@ -123,13 +123,22 @@ In Fig. \ref{fig:decode-gate-picture}, you have tensor networks picture of the f
 
 \textbf{How does $e = (1,1,1,1)$ correspond to the partial trace operations?}
 \begin{itemize}
-    \item If I just do it for single qubit line, it should correspond to the trace operation.
+    \item If I just do it for single qubit line, it should correspond to the trace operation. Maybe this condition does not make sense.(Why?)
     \item If I do it for a bell pair, the partical trace should give me a maximally mixed state.
 \end{itemize}
 
+How to write the partial trace operation in the operator basis. What you get out in the end is the coefficient for the matrices $\{I, X, Y, Z\}$
+Doing it in a single qubit line, given a state, in the form a density matrix $\rho$. Is there a requirment to choose a basis when performing the trace?
+
+\begin{align*}
+    \text{Trace} \equiv 
+\end{align*}
+
+Say I have single qubit density matrix $\rho$, which is a $rank-2$ tensor. What does $Tr(\sigma_j \rho)$ give me? It gives the expectation value of the measurement along the $\sigma_j$ axis of the qubit. Since ${\sigma_j}$ form a basis for the operator space of single qubit operations, any single qubit transformation can be characterized by 
+
+
 \textbf{How does $b_z =(1,0,0,1)$ and $\bar{b_z} = (0,1,1,0)$ correspond to syndromes 0 and 1 respectively?}
 One construct $b_z$ by the measure and prepare hypothesis. This being, if you prepare it in one of the eigenstate of the measurement basis, then it stays in the same eigenstate when there is no error. The nomenclature Quantum Stabilizer Channels makes no sense as it's a misnomer and can lead to the reader thinking this channel auto reverts from the onset of an error to one of the stabilizer states. 
-
 
 
 
