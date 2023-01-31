@@ -148,4 +148,59 @@ In appendix A of DP 2017, the author provide a presricption for representing a c
 
 Biamonte in his lectures on Quantum Tensor Networks, shows how to model the Choi Jamilowski Isomorphism as Tensor Network, adding an extra index for each qubit. 
 
+
+\section{Notes on Christmas}
+
+The ideas to evaluate until the next meeting.
+\begin{enumerate}
+    \item MPS decoding with noisy measurement
+    \item write the introduction section of the thesis, with defining the stablizer, quantum codes and formal introduction to the decoding problem
+    \item Subsection defining approximate decoding, minimum weight decoding and max likelihood decoding. 
+    \item Definitions of thresholds and pseudothresholds
+    \item thesis section on Tensor network representation of the toric code as the exemplar problem
+    \item Thesis section of group and cosets.
+    \item Proof on the equivalence between decoding concatenated quantum codes using tensor networks and it's equivalence to Belief propogation
+    \item Basic thoughts on the ideas of Entanglement phases with weak measurements as to study quantum codes with tensor networks (see the latest set of papers on entanglement phases)
+    \item Understand entanglement phase characterization through the concept of entanglement phase transisitions
+    \item Classical Spin Models as the bridge for interconversion between different tensor network ansatze
+    \item Understand the tensor network decoder of the Darmawan where they using logic representation of this problem
+    \item analyse the list of CSS Codes examples provided by Niko Breuckmann
+    \item Clearly understand the partition functions of the Ising Model 
+    \item Understand the difference between order parameters and disorder parameters
+    \item Does the rate of measurements define the transition between MBQC, CBQC and FBQC?s
+    \item If Flag Gadgets can be constructed using Classical Codes and classical codes can be decoded using Tensor Network methods, then the Quantum Legos framework can be extended to include flag fault tolerant error correction methods?
+\end{enumerate}
+
+\subsection{Elucidating the thought experiments in Monitored Quantum Circuits}
+There is a huge literature of papers for classfifying entangelment phases through monitored quantum circuits. Monitored Quantum Circuits, are circuits with mid-circuit measurements as a feature. A simple test is the study of entanglement dynamics in Lattice Surgery merge and split operations as a simple test. I hypothesisze I should be able to relate this to the stability experiments of Craig Gidney. Need to understand the difference between Entanglement Dynamics and Information Dynamics. Are weak measurements the same as ancilla assisted projective measurments? It looks like yes is the answer. 
+
+What is the goal, we want to model noisy measurments of the stabilizer checks? In particular, if flag gadgets form a part of monitored quantum circuits. The paper on Nishimori's cat makes a relation between the weak measurement protocols, it's TN representation and Nishimori Physics. The Nishimori cat paper describes the Multibody Measurement via an ancilla. One way to study the lifetimes of the merge and the split protocols. 
+
+
+Weak Monitoring - Applying a strong projective measurement on a qubit with probability \(p\)
+Weak Measurements - strong projective measurement of weakly coupled ancilla qubit.
+Does weak monitoring and weak measurements represent the same dynamics effectively?
+
+
+\section{Measurement Phases, Entanglement Phases and QEC Phases}
+All of these phases are different and this difference brought simply for the (dis)order parameter. \textbf{TODO} Identify the order and disorder parameters in these different cases and formulate a hypothesis to related to the decoding problem. MWPM, Max Likelihood decoding lie along different points of the Nishimori line.
+
+
+
+\section{On Tensor Network Decoding and Belief Propogation Decoding of concatenated Quantum Codes}
+\textit{The hypothesis}: We want to prove belief propogation contraction of tensor networks for the decoding the quantum error correcting code is the same as the belief propogation decoding of concatenated quantum codes(David Poulin). I think Tensor Network Codes already proves this through example construction of a concatenated code. It kind of looks trivial, Poulin's exact decoder is the same as the efficient contraction stragetry. Concatentation produces a tree and the efficient contraction goes from the leaf to the root. Poulin's similarly suggest decoding from the last block of concatenation towards the first level of concatenation, conditioned on the syndrome. The only thing that is not obvious is how the conditioning of the syndrome takes in Faralley's construction.
+
+
+
+\section{On the Plurality of Tensor Network Represenation of QEC Codes}
+That there exists "good" tensor network constructions of QEC codes is not suprising. After all, tensor networks were designed to efficiently simulate quantum systems. Since QM is linear, TN can effectively represent any linear system. On way of introducing non-linearity into tensor networks is through the framework of weak measurements. Holographic, concatenated and convolutional codes have a "good" TN representation. By "good" TN, we mean that it can be efficiently and exactly contracted. 
+
+\textbf{Questions}
+\begin{enumerate}
+    \item Do a lit review on the classification of TN contraction problems. 
+    \item Do convolutional codes have a "good" TN representation?
+    \item The Toric Code has representation as a MERA, PEPS and MPS. Can the plurality be extended to other codes also? One thing to investigate here is the different representation efficent for a particular spatio-temportal correlation of the underlying noise model the syndromes are sampled from?
+    \item One thing I do not understand at all is the mapping to Fermionic Gaussian States. 
+    \item How does this plurality manifest? What I am asking is, if each representation represents a node on a graph and the presence of an edge indicating the presence of a duality between these two representations, what kind of network do I have?
+\end{enumerate}
 \end{document}
