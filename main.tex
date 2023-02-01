@@ -11,6 +11,7 @@
 \usepackage{xcolor}
 \usepackage{titling}
 % \usepackage{cite}
+\usepackage[most]{tcolorbox}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{url}
@@ -19,9 +20,67 @@
 \usepackage[textwidth = 20mm]{todonotes}
 \usepackage{physics}
 \usepackage{amsthm}
+
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}
-% \usepackage{svg}
+\newtheorem{algorithm}{Algorithm}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{proposition}{Proposition}
+
+
+\newtcbtheorem{boxed-thm}{Theorem}{
+  enhanced,
+  sharp corners,
+  attach boxed title to top left={
+    yshifttext=-1mm
+  },
+  colback=white,
+  colframe=blue!75!black,
+  fonttitle=\bfseries,
+  boxed title style={
+    sharp corners,
+    size=small,
+    colback=blue!75!black,
+    colframe=blue!75!black,
+  } 
+}{thm}
+\newtcbtheorem{boxed-defn}{Definition}{
+  enhanced,
+  rounded corners,
+  attach boxed title to top left={
+    yshifttext=-1mm
+  },
+  colback=white,
+  colframe=blue!75!red,
+  fonttitle=\bfseries,
+  boxed title style={
+    rounded corners,
+    size=small,
+    colback=blue!75!red,
+    colframe=blue!75!red,
+  } 
+}{defn}
+
+\newtcbtheorem{boxed-algo}{Algorithm}{
+  enhanced,
+  rounded corners,
+  attach boxed title to top left={
+    yshifttext=-1mm
+  },
+  colback=white,
+  colframe=red!75!black,
+  fonttitle=\bfseries,
+  boxed title style={
+    rounded corners,
+    size=small,
+    colback=red!75!black,
+    colframe=red!75!black,
+  } 
+}{algo}
+
+
 \usepackage[backend=biber, giveninits=true]{biblatex}
 % \SetCiteCommand{\autocite}
 \addbibresource{references/references.bib}
@@ -50,9 +109,9 @@
 \listoftodos\todo{remove todo list when doc is complete}
 
 %% Add lline \input{chapters/chaptername.tex} to add chapter to the tex file%%
-\input{chapters/literature_review.tex}
-\input{chapters/ch1statmechmapping.tex}
-\input{chapters/ch2noisemodels.tex}
+\input{chapters/overview.tex}
+\input{chapters/ch_code_construction.tex}
+\input{chapters/ch_decoding.tex}
 
 
 % \todo{Add references to sections}
