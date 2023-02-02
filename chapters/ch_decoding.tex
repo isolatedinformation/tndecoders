@@ -3,12 +3,8 @@
 \section{Formal definition of the decoding problem}
 
 \subsection{BSV definiton of Maximum Likelihood decoders}
-In this section we formally define MLD. We consider a quantum memory composed of \(n\) physical qubits. Let \(H= (\mathrm{C}^{2})^{\otimes n}\) be the full \(n\)-qubit Hilbert space and \(\mathcal{P}\) be the group of \(n\)-qubit Pauli operators.
-\begin{boxed-defn}{n-Qubit Pauli group}{pauli-group}
-\begin{equation*}
-    \mathcal{P}_n = \{f: f = cf_1 \otimes f_2 \otimes \dots \otimes f_n\} \quad \text{where} \quad f_j \in \{I, X, Y, Z\} \ \text{and} \ c \in \{\pm 1, \pm i\}
-\end{equation*}
-\end{boxed-defn}
+In this section we formally define MLD. We consider a quantum memory composed of \(n\) physical qubits. Let \(H= (\mathrm{C}^{2})^{\otimes n}\) be the full \(n\)-qubit Hilbert space and \(\mathcal{P}\) be the group of \(n\)-qubit Pauli operators\ref{defn:pauli-group}.
+
 
 A quantum code of stabilizer type is defined by an abelian stabilizer group \(\mathcal{G} \subset \mathcal{P}\) such that \(-I \notin \mathcal{G}\). Quantum codewords are \(n\)-qubit states invariant under the action of any element of \(\mathcal{G}\). Such states define a codespace \(\mathcal{H}_0 = \{ \psi in  \mathcal{H}: g \psi = \psi \forall g \in \mathcal{G}\}\). The encoding step amounts to initializing the memory in some (unknown) state\(\rho\) supported on the codespace \(\mathcal{H}_0\). We shall consider a stochastic Pauli noise described bya linear map
 \begin{equation*}

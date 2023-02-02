@@ -10,12 +10,28 @@ Tensor Networks in the context of Quantum Error Correction have been used in two
 
 \section{Mathematical Preliminaries}
 \subsection{Group Theoretic concepts}
+\begin{boxed-defn}{Abelian and Non-Abelian Group}{abelian-group}
+A group \(G\) is said to Abelian, iff all the elements of the group pairwise commute with each other under the group operation. It is said to be non Abelian otherwise.\\
+\textbf{Examples}
+\begin{enumerate}
+    \item The group of integers \(\mathbb{Z}\) is Abelian under the addition operation.
+    \item The set of \(2 \times 2\) matrices under matrix multiplication form a non-Abelian group.
+\end{enumerate}
+\end{boxed-defn}
 
 \subsubsection{Pauli Group}
+The Pauli matrices \(I, X, Y,Z\) form a group. The \(n\)-qubit Pauli group is defined as follows
+\begin{boxed-defn}{n-Qubit Pauli group}{pauli-group}
+\begin{equation}\label{eqn: pauli-group}
+    \mathcal{G}_n = \{f: f = c\sigma_1 \otimes \sigma_2 \otimes \dots \otimes \sigma_n\} \quad \text{where} \quad \sigma_j \in \{I, X, Y, Z\} \ \text{and} \ c \in \{\pm 1, \pm i\}
+\end{equation}
+\end{boxed-defn}
+Equivalenty single qubit Pauli operators are also defined on a index notation with the following definition
+\begin{equation}\label{eqn: pauli-int-map}
+    \sigma^0 = I \quad \sigma^1 = X \quad \sigma^2 = Y \quad \sigma^3 = Z
+\end{equation}
 
-
-\subsubsection{Stabilzer Group}
-
+\subsubsection{Stabilizer Group}
 
 \subsubsection{Coset}
 
@@ -24,16 +40,32 @@ This is for partitioning the stabilizer group in the disjoint subsets
 
 
 \section{Stabilizer Quantum Error Correction}
-\subsection{Stabilizer Code}
+\subsection{Stabilizer Codes}
+We consider stabilizer quantum error correcting codes, where the codespace is determined as the subspace of the states which are simultaneously the \(+1\) eigenstates of the stabilizers. The stabilizers are a subset of the \(n\)-qubit Pauli group, \(\mathcal{G}_n\), i.e; \(\mathcal{S} \subset \mathcal{P}_n\). The codespace \(mathcal{H}_0\) can be expressed mathematically as follows
+\begin{equation}\label{eqn: codespace}
+    \mathcal{H}_0  = {\psi : S \ket{\psi} = \ket{\psi} \forall S \in \mathcal{S}}
+\end{equation}
+Consider the set of \(r\) independent generators of \(\mathcal{S}\), then \(dim(\mathcal{H}_0) = 2^(n-r)\), where \(n\) is the number of physical qubits. In other words, the number of logical qubits is \(k = n-r\).
 
 
-\subsection{CSS Codes}
+\begin{boxed-defn}{Logical Operators of a Stabilizer Code}{stab-log-op}
+The logical operators \(\mathcal{L} \subset \mathcal{G}_n\) form a non-Abelian. Given a stabilizer code \(\mathcal{S}\), it's logical operators must obey the following
+\begin{enumerate}
+    \item It has two sets of generators, X-type and Z-type generators, denoted as \(Z_\alpha, X_\alpha\), with \(\alpha = 1, \dots, k\)
+    \item For any \(L \in \mathcal{L}\) and \(S \in \mathcal{S}\), \(LS = SL\)
+    \item \(X_\alpha Z_\beta = (-1)^{\delta_{\alpha, \beta}} Z_\beta, X_\alpha\)
+\end{enumerate}
+\end{boxed-defn}
 
+\begin{boxed-defn}{Destabilisers or Pure Errors}{destabs}
+Another group of abelian operators \(P \in \mathcal(G)_n\) are called pure errors (or) destabilisers. They are characterized as follows
+\begin{enumerate}
+    \item It is a set of \(n-k\) operators \(P_i\) and \(P_i^2 = \mathbb{1}\)
+    \item \(P_i S_j = (-1)^{\delta_{i,j}} S_j P_i\) for \(S_j \in \mathcal{S}\) and \(P_i \in \mathcal{P}\)
+\end{enumerate}
+\end{boxed-defn}
 
-\subsection{Logical Operators}
-
-
-
+The stabilizers, destabilisers and logical operators together form the \(n\)-qubit Pauli group.
 
 \section{Tensor Network}
 \subsection{Tensors}
